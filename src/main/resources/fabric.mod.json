@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "enchantment-ordering-tool",
+	"version": "${version}",
+	"name": "Enchantment Ordering Tool",
+	"description": "'This tool helps you plan the optimal order of combining and applying books, to give you the cheapest possible cost.' This is a mod version of https://iamcal.github.io/enchant-order/ and the main part is not made by me.",
+	"authors": [
+		"Epibatidine"
+	],
+	"contact": {
+		"homepage": "https://github.com/Epibatidine",
+		"sources": "https://iamcal.github.io/enchant-order/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/enchantment-ordering-tool/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.epibatidine.enchantorder.EnchantmentOrderingTool"
+		],
+		"client": [
+			"io.github.epibatidine.enchantorder.EnchantmentOrderingToolClient"
+		]
+	},
+	"mixins": [
+		"enchantment-ordering-tool.mixins.json",
+		{
+			"config": "enchantment-ordering-tool.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
